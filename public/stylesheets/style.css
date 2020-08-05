@@ -1,8 +1,221 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+/*THIS IS THE CSS PAGE */
+
+/*MAIN PAGE*/
+
+* {
+    box-sizing: border-box;
 }
 
-a {
-  color: #00B7FF;
+    /*  HEADER  */
+
+header {
+    background: crimson url('../images/dragon.jpg') no-repeat center;
+    background-size: cover;
+    height: 20rem;
+    padding-bottom: 5rem;
+    padding-top: 3rem;
+    color: white;
+    border-bottom: solid crimson 8px;
+    font-size: 1.35rem;
+}
+
+.main-header {
+    float: left;
+    display: inline-block;
+    padding: 10px 0 0 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+/*  Navigation */
+
+nav {
+    float: right;
+    padding-right: 1rem;
+    text-decoration: none;
+}
+
+nav li {
+    list-style-type: none;
+    font-size: 20px;
+}
+
+nav :first-child {
+    padding-left: 5px;
+}
+
+nav a {
+    color: white;
+}
+
+nav a:hover {
+    color: gold;
+}
+
+
+/* -- BODY -- */
+
+body,
+.card {
+    background-color: palegoldenrod;
+}
+
+.founders {
+    padding-bottom: 50px;
+}
+
+h1 {
+    font-family: fantasy;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    text-decoration: underline;
+}
+
+.contact-us {
+    color: darkred;
+}
+
+.contact-us:hover {
+    color: blue;
+}
+
+main p {
+    padding-left: 1rem;
+    padding-right: 1rem;
+/*    width: auto;*/
+}
+
+.column,
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    margin-right: 3rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    border: none;
+}
+
+.card-img-top {
+    border: solid;
+    border-color: darkred;
+    border-top-right-radius: 15%;
+    border-top-left-radius: 15%;
+}
+
+.card-body {
+    background-color: gold;
+    border-bottom-right-radius: 15%;
+    border-bottom-left-radius: 15%;
+}
+
+/* FOOTER */
+footer {
+    position: fixed;
+    text-align: right;
+    bottom: 0;
+    width: 100%;
+    padding-right: 1.25rem;
+    background-color: crimson;
+    color: white;
+    border-top: solid darkred 5px;
+}
+
+
+/* SHOP PAGE*/
+
+.shop {
+    justify-content: center;
+    text-align: center;
+}
+
+/*TESTIMONIALS PAGE*/
+
+.main-testimonials {
+    justify-content: center;
+    padding-left: 1rem;
+}
+
+.OpinionAside {
+    float: right;
+    display: block;
+    width: 40%;
+}
+
+.asideHeader3 {
+    padding-top: 0;
+}
+
+.list-group {
+    float: left;
+    display: block;
+    width: 50%;
+    padding-bottom: 50px;
+}
+
+.list-group-item {
+    border: solid crimson 5px;
+}
+
+.myButton {
+    background-color: darkolivegreen;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+/*Media Queries*/
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (max-width: 720px) {
+    nav li {
+        display: inline;
+        font-size: 15px;
+        background: darkred;
+        padding: .2rem .5rem .5rem .5rem;
+    }
+    .main-testimonials {
+        padding-right: 1rem;
+    }
+    .list-group {
+        float: right;
+        width: 100%;
+    }
+    .OpinionAside {
+        float: left;
+        width: 100%;
+        padding: 20px 15px 50px;
+    }
+    .OpinionAside h3 {
+        text-align: center;
+    }
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 1080px) {
+    p {
+        text-align: center;
+        display: block;
+        font-size: 24px;
+    }
+    h1 {
+        font-size: 64px;
+    }
+    h2 {
+        font-size: 54px;
+    }
+    h3 {
+        font-size: 42px;
+    }
+    nav a {
+        font-size: 24px;
+    }
 }
