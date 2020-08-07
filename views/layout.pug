@@ -15,38 +15,40 @@ html
         nav
             ul
                 li
-                    a(href='#', data-toggle='modal', data-target='#myModal') Contact Us
+                    a(href='contact-us', data-toggle='modal', data-target='#myModal') Contact Us
                 li
-                    a(href='shop.html', target='_blank') Our Shop
+                    a(href='/shop') Our Shop
                 li
-                    a(href='testimonials.html', target='_blank') Testimonials
+                    a(href='/testimonials') Testimonials
+    // Modal has been attached to both the "Contact Us" href anchor tags
+    #myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModal', aria-hidden='true')
+        .modal-dialog(role='document')
+            .modal-content
+                .modal-header
+                    h5#exampleModalLabel.modal-title Contact Us
+                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                        span(aria-hidden='true') ×
+                .modal-body
+                    form
+                        .form-group
+                            label(for='formGroupExampleInput') Your Name
+                            input#formGroupExampleInput.form-control(type='text', placeholder='Name')
+                        .form-group
+                            label(for='exampleFormControlInput1') Email address
+                            input#exampleFormControlInput1.form-control(type='email', placeholder='name@example.com')
+                        .form-group
+                            label(for='exampleFormControlTextarea1') Your Query
+                            textarea#exampleFormControlTextarea1.form-control(rows='3')
+                .modal-footer
+                    button.btn.btn-primary(type='submit' vaulue="Submit") Send
+                    button.btn.btn-secondary(type='button', data-dismiss='modal') Cancel
+
     body
         block content
 
     footer
         | © Acquisitions Incorporated 538 of the Second Age
-//doctype html
-//html
-//// The is the head
-//meta(charset='utf-8')
-//    title Acquisitions Incorporated
-//    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-//    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css', integrity='sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh', crossorigin='anonymous')
-//    link(rel='stylesheet', href='/stylesheets/style.css')
-//    link(rel='stylesheet', href='/stylesheets/normalize.css')
-//
-//    header
-//        .main-header
-//            h1 Acquisitions Incorporated
-//            p
-//                | We are ready to help 
-//                strong YOU!
-        nav
-            ul
-                li
-                    a(href='#', data-toggle='modal', data-target='#myModal') Contact Us
-                li
-                    a(href='shop.html', target='_blank') Our Shop
-                li
-                    a(href='testimonials.html', target='_blank') Testimonials
-//    body
+        
+    script(src='https://code.jquery.com/jquery-3.4.1.slim.min.js', integrity='sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n', crossorigin='anonymous')
+    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js', integrity='sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6', crossorigin='anonymous')
+    script(src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js', integrity='sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo', crossorigin='anonymous')
