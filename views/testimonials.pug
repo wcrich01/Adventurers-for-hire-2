@@ -1,13 +1,53 @@
 extends layout
 
 block content
-    .testimonial
-        h2 Testimonials from Previous Clients
-    div
-        button.myButton(data-toggle='modal', data-target='#myButton') Click to Add Testimonial
-    .OpinionAside
-    h3.asideHeader3 We are always out to improve our services
-        p
-            | Please feel free to post your opinion of how we did on our job for you. We are always glad to hear feedback.
-    main.main-testimonials
-        #myTest.list-group
+    header
+        .main-header
+            h1 Acquisitions Incorporated
+            p
+                | We are ready to help 
+                strong YOU!
+        nav
+            ul
+                li
+                    a(href='contact-us', data-toggle='modal', data-target='#myModal') Contact Us
+                li
+                    a(href='/') Home
+                li
+                    a(href='/shop') Our Shop
+    body
+        .testimonial
+            h2 Testimonials from Previous Clients
+        div
+            button.myButton(data-toggle='modal', data-target='#myButton') Click to Add Testimonial
+        // Button Modal for adding Testimonial
+        #myButton.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myButton', aria-hidden='true', action='script.js')
+            .modal-dialog(role='document')
+                .modal-content
+                    .modal-header
+                        h5#testimonialLabel.modal-title Testimonial
+                        button.close(type='button', data-dismiss='modal', aria-label='Close')
+                            span(aria-hidden='true') ×
+                    .modal-body
+                        form#comments
+                            .form-group
+                                label(for='addName') Your Name
+                                input#addName.form-control(type='text', placeholder='Name', required='')
+                            .form-group
+                                label(for='addTitle') Comment Title
+                                input#addTitle.form-control(type='text', placeholder='Title', required='')
+                            .form-group
+                                label(for='addOpinion') Your Opinion
+                                textarea#addOpinion.form-control(rows='3', required='')
+                    .modal-footer
+                        button.btn.btn-primary.sendComment(type='button', data-dismiss='modal') Submit
+                        button.btn.btn-secondary.cancelComment(type='button', data-dismiss='modal') Cancel
+        // End of Modal for adding Testimonial
+        .OpinionAside
+            h3.asideHeader3 We are always out to improve our services
+            p
+                | Please feel free to post your opinion of how we did on our job for you. We are always glad to hear feedback.
+        main.main-testimonials
+            #myTest.list-group
+                script(src='/javascripts/script.js')
+        

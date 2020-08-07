@@ -1,60 +1,75 @@
 extends layout
 
 block content
-  main
-    div
-        h2 Monsters Mean More Problems
-        p
-            | We live in a time where there are creatures causing havoc all over the world. The ruling powers can't deal with every goblin den or undead creature causing mayhem. So when in need reach hire the professionals.We are here to deal with any threat.
-    div
-        p
-            strong
-                | There is no problem too big or too small. 
-                a.contact-us(href='#', data-toggle='modal', data-target='#myModal') Contact us
-                |  with the details and we will work for you!
-    div
-        h3 Our Role
-        p
-            | Acquisitions Incorporated was founded by a group of like-minded individuals seeking to aide their communities and see the wider world. When the local government can't spare the manpower to deal with threats, you can count on us to step in and clear this menace.
-        p
-            | We also also beleive in helping out those seeking to protect themselves or adventures in need of gear, therefore, we opened a shop on in the heart of the market district of Summer Spring. We have a wide selection of merchandise for any adventurer.
-    div
-        h3 Our Story
-        p
-            | The group first meet when they all answered a wanted ad for adventurers to search out a missing expedition in the Greypeak Mountains. After a long series of adventures after finding the ransaked expeditionary fort, we defeated the hold of goblins and managed to free the few survivors of the expedition.
-        p
-            | Upon returning to Summer Spring, the group dealt with undead rising from the sewers at night. The group discovered this was the work of several vampires working out of building in the market district. The group received titles from the high coucil of the city and became minor nobility. The took over ownership of the now vacant building and turned it into the headquarters and store for Aquistions Incorporated.
-    .founders
-        h2 Our Founders
-        .column
-            .card(style='width: 12rem;')
-                img.card-img-top(src='../images/Hrothgar.jpg', alt='Hrothgar Umberlain')
-                .card-body
-                    h5.card-title Hrothgar Umberlain
-                    p.card-text
-                        | The leader of the Acquisitions Incorporated. He is a man at home in the heat of battle.
-            .card(style='width: 12rem;')
-                img.card-img-top(src='../images/Marcus.jpg', alt='Marcus Ignasus')
-                .card-body
-                    h5.card-title Marcus Ignasus
-                    p.card-text
-                        | A founding member of the Acquisitions Incorporated. He is a highly skilled mage and notable enchanter.
-            .card(style='width: 12rem;')
-                img.card-img-top(src='../images/Matt.jpg', alt='Matt the Crazed')
-                .card-body
-                    h5.card-title Matt the Crazed
-                    p.card-text
-                        | A founding member of the Acquisitions Incorporated. He is a highly skilled mage though highly unpredictable.
-            .card(style='width: 12rem;')
-                img.card-img-top(src='../images/Eladrin.jpg', alt='Eladrin')
-                .card-body
-                    h5.card-title Eladrin
-                    p.card-text
-                        | A founding member of the Acquisitions Incorporated. He is a powerful druid of the woods.
-            .card(style='width: 12rem;')
-                img.card-img-top(src='../images/Altius.jpg', alt='Altius Von Vietinghoff')
-                .card-body
-                    h5.card-title Altius Von Vietinghoff
-                    p.card-text
-                        | A founding member of the Acquisitions Incorporated. He has clashed with evil and found it wanting.
+    header
+        .main-header
+            h1 Acquisitions Incorporated
+            p
+                | We are ready to help 
+                strong YOU!
+        nav
+            ul
+                li
+                    a(href='contact-us', data-toggle='modal', data-target='#myModal') Contact Us
+                li
+                    a(href='/shop') Our Shop
+                li
+                    a(href='/testimonials') Testimonials
+    body
+        main
+            div
+                h2 Monsters Mean More Problems
+                p
+                    | We live in a time where there are creatures causing havoc all over the world. The ruling powers can't deal with every goblin den or undead creature causing mayhem. So when in need reach hire the professionals.We are here to deal with any threat.
+            div
+                p
+                    strong
+                        | There is no problem too big or too small. 
+                        a.contact-us(href='#', data-toggle='modal', data-target='#myModal') Contact us
+                        |  with the details and we will work for you!
+            div
+                h3 Our Role
+                p
+                    | Acquisitions Incorporated was founded by a group of like-minded individuals seeking to aide their communities and see the wider world. When the local government can't spare the manpower to deal with threats, you can count on us to step in and clear this menace.
+                p
+                    | We also also beleive in helping out those seeking to protect themselves or adventures in need of gear, therefore, we opened a shop on in the heart of the market district of Summer Spring. We have a wide selection of merchandise for any adventurer.
+            div
+                h3 Our Story
+                p
+                    | The group first meet when they all answered a wanted ad for adventurers to search out a missing expedition in the Greypeak Mountains. After a long series of adventures after finding the ransaked expeditionary fort, we defeated the hold of goblins and managed to free the few survivors of the expedition.
+                p
+                    | Upon returning to Summer Spring, the group dealt with undead rising from the sewers at night. The group discovered this was the work of several vampires working out of building in the market district. The group received titles from the high coucil of the city and became minor nobility. The took over ownership of the now vacant building and turned it into the headquarters and store for Aquistions Incorporated.
+            .founders
+                h2 Our Founders
+                .column
+                    .card(style='width: 12rem;')
+                        img.card-img-top(src='../images/Hrothgar.jpg', alt='Hrothgar Umberlain')
+                        .card-body
+                            h5.card-title Hrothgar Umberlain
+                            p.card-text
+                                | The leader of the Acquisitions Incorporated. He is a man at home in the heat of battle.
+                    .card(style='width: 12rem;')
+                        img.card-img-top(src='../images/Marcus.jpg', alt='Marcus Ignasus')
+                        .card-body
+                            h5.card-title Marcus Ignasus
+                            p.card-text
+                                | A founding member of the Acquisitions Incorporated. He is a highly skilled mage and notable enchanter.
+                    .card(style='width: 12rem;')
+                        img.card-img-top(src='../images/Matt.jpg', alt='Matt the Crazed')
+                        .card-body
+                            h5.card-title Matt the Crazed
+                            p.card-text
+                                | A founding member of the Acquisitions Incorporated. He is a highly skilled mage though highly unpredictable.
+                    .card(style='width: 12rem;')
+                        img.card-img-top(src='../images/Eladrin.jpg', alt='Eladrin')
+                        .card-body
+                            h5.card-title Eladrin
+                            p.card-text
+                                | A founding member of the Acquisitions Incorporated. He is a powerful druid of the woods.
+                    .card(style='width: 12rem;')
+                        img.card-img-top(src='../images/Altius.jpg', alt='Altius Von Vietinghoff')
+                        .card-body
+                            h5.card-title Altius Von Vietinghoff
+                            p.card-text
+                                | A founding member of the Acquisitions Incorporated. He has clashed with evil and found it wanting.
 
