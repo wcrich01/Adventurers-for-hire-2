@@ -4,12 +4,12 @@ var arrAllEquipment = [];
 var arr = [];
 var arrDesiredEquipmentUrls = [];
 var arrDesiredEquipment = [
-//    {
-//        name: "Axe",
-//        weapon_range: "Martial Melee",
-//        cost: 5
-//        
-//    },
+    {
+        name: "Axe",
+        weapon_range: "Martial Melee",
+        cost: 5
+        
+    },
 ];
 
 const baseUrl = "https://www.dnd5eapi.co";
@@ -18,6 +18,7 @@ fetch(baseUrl + weaponCategoryUrl)
     .then(res => res.json())
     .then(inventoryResult => {
         //console.log(inventoryResult.equipment);
+    //Get a random 10 items from the weapon array
         arrAllEquipment = inventoryResult.equipment;
         while(arr.length < 10){
             var r = Math.floor(Math.random() * 37);
@@ -38,8 +39,31 @@ fetch(baseUrl + weaponCategoryUrl)
                             arrDesiredEquipment.push(equipmentResult);
                     });
                 });
-                console.log(arrDesiredEquipment);           
-    });
+                console.log(arrDesiredEquipment); 
+    })
+    .then(showEquip => {
+        arrDesiredEquipment.forEach(element => {
+            const displayEquipment = equipmentAvail => {
+                const equipmentAvailHTMLString = equipmentAvail
+                    .map(
+                        equip =>
+                        `
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title">${equip.name}</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">${equip.weapon_range}</h6>
+                                    <p class="card-text">${equip.cost} gp.</p>
+                                    <a href="#" class="card-link">Add to Cart</a>
+                                </div>
+                            </div>
+                        `
+                    )
+                    .join("");
+                shopInventory.innerHTML = equipmentAvailHTMLString;
+            };
+            displayEquipment(arrDesiredEquipment);
+        }); 
+});
     
 
 // Function to display Equipment for sale in store

@@ -8,5 +8,3 @@ Using Express created a CRUD app to make a shopping cart. In the shopping cart i
 
 
 
-
-

@@ -17,4 +17,9 @@ router.get('/shop', function(req, res, next) {
     next();
 });
 
+router.get('/cart', function(req, res, next) {
+    res.render('cart', { title: 'Shopping Cart' });
+    next();
+});
+
 module.exports = router;
