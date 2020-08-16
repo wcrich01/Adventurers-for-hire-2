@@ -118,6 +118,8 @@ main {
     border-bottom-left-radius: 15%;
 }
 
+
+
 /* FOOTER */
 footer {
     position: fixed;
@@ -136,6 +138,18 @@ footer {
 .shop {
     justify-content: center;
     text-align: center;
+}
+
+#shopInventory {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-shop {
+    margin-left: 3rem;
+    background-color: gold;
+    border-radius: 15%;
+    margin-bottom: 2rem;
 }
 
 /*TESTIMONIALS PAGE*/
@@ -171,6 +185,19 @@ footer {
     color: white;
     margin-bottom: 1rem;
     margin-left: 1rem;
+}
+
+/*SHOPPING CART PAGE*/
+
+#cartTable {
+    width: 50%;
+    margin-left: 5rem;
+}
+
+#cartInventory {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 /*Media Queries*/
