@@ -27,7 +27,9 @@ router.post('/add',asyncHandler(async (req, res) => {
 
 /* Delete individual article. */
 router.post('/:id/delete', asyncHandler(async (req ,res) => {
-  res.redirect("/cart");
+    const cartItem = await ShoppingCart.findByPk(req.params.id);
+    await cartItem.destroy();
+    res.redirect("/cart");
 }));
 
 

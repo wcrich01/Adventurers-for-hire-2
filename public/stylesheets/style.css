@@ -200,6 +200,14 @@ footer {
     justify-content: center;
 }
 
+.shpCrtDelete {
+    text-align: right;
+}
+
+.shpCrtDeleteBtn {
+    float: right;
+}
+
 /*Media Queries*/
 
 /*Small devices (landscape phones, 576px and up)*/

@@ -18,14 +18,14 @@ fetch('/cart/list')
                                     <tr>
                                         <th scope="col">Name</th>
                                         <th scope="col"> Cost</th>
-                                        <th scope="col">Remove Item</th>
+                                        <th scope="col" class="shpCrtDelete">Remove Item</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td>${cart.name}</td>
                                         <td>${cart.cost_quantity} ${cart.cost_unit}</td>
-                                        <td><button class="js-add btn btn btn-danger" onclick="deleteFromShoppingCart('${cart.id}'${cart.name}', ${cart.cost_quantity}, '${cart.cost_unit}')" type="button">Remove <i class="fa fa-trash-o"></button></td>
+                                        <td><button class="js-add btn btn btn-danger shpCrtDeleteBtn" onclick="deleteFromShoppingCart('${cart.id}'${cart.name}', ${cart.cost_quantity}, '${cart.cost_unit}')" type="button">Remove <i class="fa fa-trash-o"></button></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -41,14 +41,14 @@ fetch('/cart/list')
 
 
 //Function to save the selected items to the SQL database
-function saveToShoppingCart(id, name, cost_quantity, cost_unit) {
+function deleteFromShoppingCart(id, name, cost_quantity, cost_unit) {
     var data = {
         "id": id,
         "name": name,
         "cost_quantity": cost_quantity,
         "cost_unit": cost_unit
     };
-    console.log(name);
+    //console.log(name);
     fetch('/:id/delete', {
         method: 'DELETE',
         headers: {
