@@ -21,7 +21,6 @@ router.get('/list', asyncHandler(async (req, res) => {
 
 /* --- POST to shopping cart --- */
 router.post('/add',asyncHandler(async (req, res) => {
-    console.log("Hello");
     const shoppingCart = await ShoppingCart.create(req.body);
 }));
 
