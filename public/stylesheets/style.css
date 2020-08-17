@@ -141,12 +141,13 @@ footer {
 }
 
 #shopInventory {
+    justify-content: center;
     display: flex;
     flex-wrap: wrap;
 }
 
 .card-shop {
-    margin-left: 3rem;
+    margin-left: 2rem;
     background-color: gold;
     border-radius: 15%;
     margin-bottom: 2rem;

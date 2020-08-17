@@ -1,3 +1,5 @@
+## Project Details:
+
 This is a company webpage for a group of adventurers. 
 
 
@@ -7,12 +9,13 @@ Created a randomize function to add random items to the shop page.
 Using Express created a CRUD app to make a shopping cart. In the shopping cart include the ability to delete an item from the list. 
 
 
-Requires: 
+## Requires: 
+---
+Apple: Homebrew -- [Link](https://brew.sh/)
 
-Apple: Homebrew -- https://brew.sh/
-Windows: Chocolatey -- https://chocolatey.org/
+Windows: Chocolatey -- [Link](https://chocolatey.org/)
 
-Node.JS Version - 14.7.0 -- https://nodejs.org/en/download/current/
+Node.JS Version - 14.7.0 -- [Link](https://nodejs.org/en/download/current/)
 
 Express.JS Verson - 6.14.7 -- In console install using "npm install express"
 
@@ -27,9 +30,12 @@ SQLite3 Version - 5.0.0 install in console using "npm install sqlite3@5.0.0"
 nodemon Version - 2.0.4 install in console using "npm install nodemon"
 
 This project used DB Browser for SQLite. The program can be found at https://sqlitebrowser.org/dl/
+---
 The project was tested with HeidiSQL using the following commands:
+
     1. Start a new Session
     2. Network Type: Select SQLite from the dropdown menu.
     3. Library: sqlite3.dll
     4. Datatbase filename: select the development.db from the file path.
     5. Hit Open
+
