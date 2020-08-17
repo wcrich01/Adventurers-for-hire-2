@@ -42,6 +42,6 @@ The project was tested with HeidiSQL using the following commands:
     5. Hit Open
     
 ---
-This project is run using a node server. After installation of required programs. Start the server using the command "npm start". 
+This project is run using a node server. After installation of required programs, start the server using the command "npm start". 
 
-After the server has started navigate to an internet browser(Chrome was used in development). The webpage can be viewed on localhost:3000.
+After the server has started navigate to an internet browser(Chrome was used in development). The webpage can be viewed on *localhost:3000*.
