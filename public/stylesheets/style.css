@@ -208,6 +208,14 @@ footer {
     float: right;
 }
 
+.shpCrtBuy {
+    text-align: right;
+}
+
+.shpCrtBuyBtn {
+    float: right;
+}
+
 /*Media Queries*/
 
 /*Small devices (landscape phones, 576px and up)*/

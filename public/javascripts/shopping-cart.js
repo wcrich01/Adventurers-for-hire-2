@@ -1,66 +1,53 @@
+//The buy button does not currently function.
+
 var arrShoppingCart = [];
 
 fetch('/cart/list')
     .then(res => res.json())
     .then(shoppingCartResult => {
-        arrShoppingCart.push(shoppingCartResult);
-    })
-    .then(shoppingCartResult => {
-        console.log("Hello There");
-        arrShoppingCart.forEach(element => {
-            var displayShoppingCart = equipmentInCart => {
-                var equipmentInCartHTMLString = equipmentInCart
-                    .map(
-                        cart =>
+        console.log("Hello There o/");
+        let equipmentInCartHTMLString = 
                         `
                             <table class="table table-hover" id="cartTable">
                                 <thead class="thead-dark">
                                     <tr>
                                         <th scope="col">Name</th>
-                                        <th scope="col"> Cost</th>
+                                        <th scope="col">Cost</th>
+                                        <th scope="col" class="shpCrtBuy">Buy Item</th>
                                         <th scope="col" class="shpCrtDelete">Remove Item</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>${cart.name}</td>
-                                        <td>${cart.cost_quantity} ${cart.cost_unit}</td>
-                                        <td><button class="js-add btn btn btn-danger shpCrtDeleteBtn" onclick="deleteFromShoppingCart('${cart.id}'${cart.name}', ${cart.cost_quantity}, '${cart.cost_unit}')" type="button">Remove <i class="fa fa-trash-o"></button></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        `
-                    )
-                    .join("");
-                cartInventory.innerHTML = equipmentInCartHTMLString;
-            };
-            displayShoppingCart(arrShoppingCart);
-        });  
-    console.log(arrShoppingCart);
+                        `;
+        shoppingCartResult.forEach(item => {
+            let tempName = 
+                `
+                    <tr class="table-secondary">
+                        <td>${item.name}</td>
+                        <td>${item.cost_quantity} ${item.cost_unit}</td>
+                        <td><button class="js-add btn btn btn-success shpCrtBuyBtn" type="button">Buy</button></td>
+                        <td><button class="js-add btn btn btn-danger shpCrtDeleteBtn" onclick="deleteFromShoppingCart(${item.id},'${item.name}', ${item.cost_quantity}, '${item.cost_unit}')" type="button">Remove <i class="fa fa-trash-o"></button></td>
+                    </tr>
+                `;
+            equipmentInCartHTMLString += tempName;
+        });
+         let nameTemp = "</tbody></table>";
+        equipmentInCartHTMLString += nameTemp;
+        cartInventory.innerHTML = equipmentInCartHTMLString;
     });
 
 
 //Function to save the selected items to the SQL database
 function deleteFromShoppingCart(id, name, cost_quantity, cost_unit) {
-    var data = {
-        "id": id,
-        "name": name,
-        "cost_quantity": cost_quantity,
-        "cost_unit": cost_unit
-    };
     //console.log(name);
-    fetch('/:id/delete', {
-        method: 'DELETE',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
+    fetch('/cart/'+id+'/delete', {
+            method: 'POST',
         })
-        .then(response => response.json())
         .then(data => {
-          console.log('Success:', data);
+            location.reload();
+            return false;
         })
         .catch((error) => {
-          console.error('Error:', error);
+            console.error('Error:', error);
         });
 };

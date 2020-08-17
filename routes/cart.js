@@ -29,7 +29,7 @@ router.post('/add',asyncHandler(async (req, res) => {
 router.post('/:id/delete', asyncHandler(async (req ,res) => {
     const cartItem = await ShoppingCart.findByPk(req.params.id);
     await cartItem.destroy();
-    res.redirect("/cart");
+    res.redirect(req.get('referer'));
 }));
 
 

@@ -14,7 +14,7 @@ fetch(baseUrl + weaponCategoryUrl)
         //console.log(inventoryResult.equipment);
     //Get a random 10 items from the weapon array
         arrAllEquipment = inventoryResult.equipment;
-        while(arr.length < 10){
+        while(arr.length < 20){
             var r = Math.floor(Math.random() * 37);
             if(arr.indexOf(r) === -1) arr.push(r);
         }
@@ -66,7 +66,8 @@ function saveToShoppingCart(name, category_range, cost_quantity, cost_unit) {
         "name": name,
         "category_range": category_range,
         "cost_quantity": cost_quantity,
-        "cost_unit": cost_unit
+        "cost_unit": cost_unit,
+        //"quantity": 1
     };
     console.log(name);
     fetch('/cart/add', {

@@ -7,7 +7,8 @@ module.exports = (sequelize) => {
         name: Sequelize.STRING,
         category_range: Sequelize.STRING,
         cost_quantity: Sequelize.INTEGER,
-        cost_unit: Sequelize.STRING
+        cost_unit: Sequelize.STRING,
+        quantity: Sequelize.INTEGER,
     }, { sequelize });
 
     return ShoppingCart;
