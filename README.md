@@ -22,13 +22,13 @@ Using Express created a CRUD app to make a shopping cart. In the shopping cart i
 
 **Pug Version** - 3.0.0 -- In console install using "npm install pug@3.0.0"
 
-**Sequelize Version** - 6.3.4 In console install using "npm install sequelize@6.3.4"
+**Sequelize Version** - 6.3.4 -- In console install using "npm install sequelize@6.3.4"
 
-**Sequelize-CLI Version** - 6.2.0 In console install using "npm install sequelize-cli"
+**Sequelize-CLI Version** - 6.2.0 -- In console install using "npm install sequelize-cli"
 
-**SQLite3 Version** - 5.0.0 install in console using "npm install sqlite3@5.0.0"
+**SQLite3 Version** - 5.0.0 -- Install in console using "npm install sqlite3@5.0.0"
 
-**nodemon Version** - 2.0.4 install in console using "npm install nodemon"
+**nodemon Version** - 2.0.4 -- Install in console using "npm install nodemon"
 
 This project used DB Browser for SQLite. The program can be found at https://sqlitebrowser.org/dl/
 
@@ -40,3 +40,8 @@ The project was tested with HeidiSQL using the following commands:
     3. Library: sqlite3.dll
     4. Datatbase filename: select the development.db from the file path.
     5. Hit Open
+    
+---
+This project is run using a node server. After installation of required programs. Start the server using the command "npm start". 
+
+After the server has started navigate to an internet browser(Chrome was used in development). The webpage can be viewed on localhost:3000.
