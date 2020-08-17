@@ -12,25 +12,25 @@ Using Express created a CRUD app to make a shopping cart. In the shopping cart i
 ## Requires: 
 
 ---
-Apple: Homebrew -- [Link](https://brew.sh/)
+**Apple: Homebrew** -- https://brew.sh/
 
-Windows: Chocolatey -- [Link](https://chocolatey.org/)
+**Windows: Chocolatey** -- https://chocolatey.org/
 
-Node.JS Version - 14.7.0 -- [Link](https://nodejs.org/en/download/current/)
+**Node.JS Version** - 14.7.0 -- https://nodejs.org/en/download/current/
 
-Express.JS Verson - 6.14.7 -- In console install using "npm install express"
+**Express.JS Verson** - 6.14.7 -- In console install using "npm install express"
 
-Pug Version - 3.0.0 -- In console install using "npm install pug@3.0.0"
+**Pug Version** - 3.0.0 -- In console install using "npm install pug@3.0.0"
 
-Sequelize Version - 6.3.4 In console install using "npm install sequelize@6.3.4"
+**Sequelize Version** - 6.3.4 In console install using "npm install sequelize@6.3.4"
 
-Sequelize-CLI Version - 6.2.0 In console install using "npm install sequelize-cli"
+**Sequelize-CLI Version** - 6.2.0 In console install using "npm install sequelize-cli"
 
-SQLite3 Version - 5.0.0 install in console using "npm install sqlite3@5.0.0"
+**SQLite3 Version** - 5.0.0 install in console using "npm install sqlite3@5.0.0"
 
-nodemon Version - 2.0.4 install in console using "npm install nodemon"
+**nodemon Version** - 2.0.4 install in console using "npm install nodemon"
 
-This project used DB Browser for SQLite. The program can be found at [Link](https://sqlitebrowser.org/dl/)
+This project used DB Browser for SQLite. The program can be found at https://sqlitebrowser.org/dl/
 
 ---
 The project was tested with HeidiSQL using the following commands:
