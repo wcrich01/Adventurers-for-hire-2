@@ -10,6 +10,7 @@ Using Express created a CRUD app to make a shopping cart. In the shopping cart i
 
 
 ## Requires: 
+
 ---
 Apple: Homebrew -- [Link](https://brew.sh/)
 
@@ -29,7 +30,8 @@ SQLite3 Version - 5.0.0 install in console using "npm install sqlite3@5.0.0"
 
 nodemon Version - 2.0.4 install in console using "npm install nodemon"
 
-This project used DB Browser for SQLite. The program can be found at https://sqlitebrowser.org/dl/
+This project used DB Browser for SQLite. The program can be found at [Link](https://sqlitebrowser.org/dl/)
+
 ---
 The project was tested with HeidiSQL using the following commands:
 
@@ -38,4 +40,3 @@ The project was tested with HeidiSQL using the following commands:
     3. Library: sqlite3.dll
     4. Datatbase filename: select the development.db from the file path.
     5. Hit Open
-
