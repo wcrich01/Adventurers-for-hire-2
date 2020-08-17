@@ -27,9 +27,14 @@ SQLite3 Version - 5.0.0 install in console using "npm install sqlite3@5.0.0"
 nodemon Version - 2.0.4 install in console using "npm install nodemon"
 
 This project used DB Browser for SQLite. The program can be found at https://sqlitebrowser.org/dl/
+
 The project was tested with HeidiSQL using the following commands:
     1. Start a new Session
+    
     2. Network Type: Select SQLite from the dropdown menu.
+    
     3. Library: sqlite3.dll
+    
     4. Datatbase filename: select the development.db from the file path.
+    
     5. Hit Open
