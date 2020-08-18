@@ -37,7 +37,7 @@ fetch('/cart/list')
     });
 
 
-//Function to save the selected items to the SQL database
+//Function to delete an item from the shopping cart 
 function deleteFromShoppingCart(id, name, cost_quantity, cost_unit) {
     //console.log(name);
     fetch('/cart/'+id+'/delete', {

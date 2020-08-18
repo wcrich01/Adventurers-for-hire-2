@@ -24,7 +24,7 @@ router.post('/add',asyncHandler(async (req, res) => {
     const shoppingCart = await ShoppingCart.create(req.body);
 }));
 
-/* Delete individual article. */
+/* Delete item in cart. */
 router.post('/:id/delete', asyncHandler(async (req ,res) => {
     const cartItem = await ShoppingCart.findByPk(req.params.id);
     await cartItem.destroy();
