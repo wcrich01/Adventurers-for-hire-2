@@ -15,7 +15,7 @@ Using Express created a CRUD app to make a shopping cart. In the shopping cart i
 This project used Git Bash which can be downloaded for both Windows and Mac at: https://git-scm.com/downloads
 
 ---
-**Apple: Homebrew** -- https://brew.sh/
+**Mac: Homebrew** -- https://brew.sh/
 
 **Windows: Chocolatey** -- https://chocolatey.org/
 
