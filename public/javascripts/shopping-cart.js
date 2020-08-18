@@ -1,7 +1,7 @@
 //The buy button does not currently function.
 
 var arrShoppingCart = [];
-
+//Building the table for the shopping cart 
 fetch('/cart/list')
     .then(res => res.json())
     .then(shoppingCartResult => {
