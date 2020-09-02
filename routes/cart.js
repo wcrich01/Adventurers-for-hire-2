@@ -16,12 +16,41 @@ function asyncHandler(cb){
 
 router.get('/list', asyncHandler(async (req, res) => {
     //res.render('shopping-cart', { title: 'Shopping Cart' });
-    const shoppingCart = await ShoppingCart.findAll().then( (result) => res.json(result) );
+    const shoppingCart = await ShoppingCart.findAll().then( (result) => {
+        
+        res.json(result); 
+        //console.log(result);
+    });
 }));
 
 /* --- POST to shopping cart --- */
 router.post('/add',asyncHandler(async (req, res) => {
-    const shoppingCart = await ShoppingCart.create(req.body);
+    const findcart = await ShoppingCart.findOne({ where: { name: req.body.name } });
+    if (findcart === null) {
+        const shoppingCart = await ShoppingCart.create(req.body).then( (result) => {
+            res.json(result);
+        });
+    } else {
+        let newQuantity = findcart.quantity+1;
+        await ShoppingCart.update({quantity:newQuantity}, { where: { name: findcart.name } }).then( (result) => {
+        res.json(result);
+    }); 
+    }
+    
+}));
+
+/* Update quantity of item in shopping cart */
+router.post('/:id/quantity', asyncHandler(async (req, res) => {
+    let shoppingCart;
+    shoppingCart = await ShoppingCart.findByPk(req.params.id);
+    if(shoppingCart) {
+        await shoppingCart.update(req.body).then( (result) => {
+        res.json(result); 
+        //console.log(result);
+    }); 
+    } else {
+        res.sendStatus(404);
+    }
 }));
 
 /* Delete item in cart. */

@@ -62,12 +62,13 @@ fetch(baseUrl + weaponCategoryUrl)
     
 //Function to save the selected items to the SQL database
 function saveToShoppingCart(name, category_range, cost_quantity, cost_unit) {
+    $(':button').prop('disabled', true);
     var data = {
         "name": name,
         "category_range": category_range,
         "cost_quantity": cost_quantity,
         "cost_unit": cost_unit,
-        //"quantity": 1
+        "quantity": 1
     };
     console.log(name);
     fetch('/cart/add', {
@@ -79,10 +80,12 @@ function saveToShoppingCart(name, category_range, cost_quantity, cost_unit) {
         })
         .then(response => response.json())
         .then(data => {
-          console.log('Success:', data);
+            $(':button').prop('disabled', false);
+            console.log('Success:', data);
         })
         .catch((error) => {
-          console.error('Error:', error);
+            $(':button').prop('disabled', false);
+            console.error('Error:', error);
         });
 };
 
